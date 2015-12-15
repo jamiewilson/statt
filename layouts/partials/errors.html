@@ -1,0 +1,11 @@
+{{#unless parentDir}}
+<div class="message error">✖︎ You need to add <code>parentDir: blog</code> to the frontmatter in order for this post to be served from the <code>/blog/post-title</code> address.</div>
+{{/unless}}
+
+{{#unless collection}}
+<div class="message warning">⚠️ In order for this post to be included in the posts collection, you need to add <code>collection: posts</code> to the frontmatter.</div>
+{{/unless}}
+
+{{#unless published}}
+<div class="message warning">⚠️ Consider adding a published date, like so <code>published: YYYY-MM-DD</code>, to your post front matter.</div>
+{{/unless}}

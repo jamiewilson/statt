@@ -1,0 +1,187 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 5% 20px;
+}
+
+nav,
+header,
+main,
+footer,
+article {
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+}
+
+div,
+section,
+nav ul { padding: 1.5rem; }
+
+p:first-child {margin-top: 0}
+p:last-child {margin-bottom: 0}
+
+aside {
+  background-color: #f2f2f2;
+  font-size: 0.75rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  span { display: inline-flex; }
+}
+
+aside a { margin-left: 1rem; }
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.3rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.1rem;
+  margin-bottom: 1.3rem;
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+img[alt="fullwidth"] { width: 100%; }
+
+figure { margin: 0; }
+
+a { color: #f18260; }
+
+a[href=""] {
+  color: #ccc;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+// Code Blocks
+
+pre,
+code {
+  background-color: #f2f2f2;
+  border-radius: 3px;
+  color: #333;
+  font-size: 0.875rem;
+  overflow: auto;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+pre code { padding: 0; }
+code { padding: 0.2rem 0.4rem; }
+
+// Tables
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+thead { background-color: #f2f2f2; }
+tr    { border-bottom: 1px solid #ddd; }
+td    { display: table-flex; }
+
+tbody tr:last-child { border-bottom: none; }
+
+th:not(:last-child),
+td:not(:last-child) {
+  border-right: 1px solid #ddd;
+}
+
+th, td {
+  padding: 0.5rem;
+  text-align: left;
+  line-height: 1.4;
+}
+
+//====================================================
+//  Boilerplate Error Messages
+//====================================================
+
+$warning: #EEB121;
+$error: #E07F75;
+
+.message {
+  color: black;
+  padding: 1rem;
+  font-size: 14px;
+  border-radius: 3px;
+  border-width: 1px;
+  border-style: solid;
+  margin-bottom: 1rem;
+  code {
+    font-size: 12px;
+    background: white;
+  }
+}
+
+.warning {
+  background: fade-out($warning, 0.75);
+  border-color: $warning;
+  &:first-letter {
+    margin-right: 0.5rem;
+    color: $warning;
+  }
+}
+
+.error {
+  background: fade-out($error, 0.75);
+  border-color: $error;
+  &:first-letter {
+    margin-right: 0.5rem;
+    color: $error;
+  }
+}

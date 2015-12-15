@@ -1,0 +1,18 @@
+---
+title: Blog
+subtitle: Example Posts
+collection: pages
+order: 2
+---
+
+<main>
+  <aside>pages/blog.html</aside>
+  <section>
+    <h1>{{subtitle}}:</h1>
+    <ul>
+     {{#each collections.posts}}
+       <li><a href="/{{path}}">{{title}}</a></li>
+     {{/each}}
+    </ul>
+  </section>
+</main>
