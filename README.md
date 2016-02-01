@@ -13,7 +13,7 @@ It uses [Browsersync](http://browsersync.io) to autoreload on file changes, sync
 git clone https://github.com/jamiewilson/statt.git <folder-name>
 ```
 
-_Or manually install by downloading the [latest release](https://github.com/jamiewilson/statt/releases)._
+_Or manually install by [downloading the ZIP](https://github.com/jamiewilson/statt/archive/master.zip)._
 
 **3. Install the dependencies and create a global symlink with:**
 
