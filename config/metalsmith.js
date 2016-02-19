@@ -10,7 +10,6 @@ var layouts      = require('metalsmith-layouts');
 var markdown     = require('metalsmith-markdown');
 var permalinks   = require('metalsmith-permalinks');
 var prefix       = require('metalsmith-autoprefixer');
-var prism        = require('metalsmith-prism');
 var sass         = require('metalsmith-sass');
 var uglify       = require('metalsmith-uglify');
 var watch        = require('metalsmith-watch');
@@ -46,7 +45,6 @@ metalsmith(__dirname)
   .destination('../' + config.defaults.dest)
   .metadata(config.defaults,            log.step('Defaults Defined'))
   .use(markdown(config.markdown),       log.step('Markdown Files to HTML'))
-  .use(prism(),                         log.step('Code Highlighted'))
   .use(drafts(),                        log.step('Drafts Hidden'))
   .use(dateFormat(config.dateFormat),   log.step('Dates Formatted'))
   .use(collections(config.collections), log.step('Collections Defined'))

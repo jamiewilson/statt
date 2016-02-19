@@ -10,8 +10,6 @@ module.exports = {
   smartLists: true,
   // Sanitize the output. Ignore any HTML that has been input.
   sanitize: false,
-  // speficy the CSS prefix for PrismJS highlighting
-  langPrefix: 'language-',
   // removes any markup with the `data-markdown` attribute
   removeAttributeAfterwards: true
 };

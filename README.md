@@ -92,9 +92,6 @@ Use markdown content within html tags via data-markdown attribute.
 **[metalsmith-permalinks](https://github.com/segmentio/metalsmith-permalinks)**  
 Apply custom permalinks and rename files to be nested properly for static sites, basically converting about.html into about/index.html.
 
-**[metalsmith-prism](https://github.com/Availity/metalsmith-prism)**  
-Syntax highlighting for HTML templates using [Prism.js](http://prismjs.com/).
-
 **[metalsmith-sass](https://github.com/stevenschobert/metalsmith-sass)**  
 Convert Sass/SCSS syntax to CSS.
 

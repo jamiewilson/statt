@@ -1,5 +1,6 @@
 //  Start, Steps, and Build Error Messages
 var chalk = require('chalk');
+var browsersync = require('browser-sync').create();
 var config = { browsersync: require('./browsersync') };
 
 // Inform that the site build has started
@@ -14,7 +15,7 @@ module.exports = {
   },
   // Launch Browsersync server after build is done
   build: function(error) {
-    require('browser-sync').create().init(config.browsersync);
+    browsersync.init(config.browsersync);
     if (error) {
       // Reports any build errors on initial build
       // TODO: throw after a rebuild as well
