@@ -36,15 +36,15 @@ defaults:
 
 **Which are used to make these {{#with pages}}{{add length 1}}{{/with}} pages:**
 <ul>
-  <li>`overview` — `pages/index.html`</li>
+  <li>`overview` — `content/index.html`</li>
   {{#each pages}}
-    <li>`{{path}}` — `pages/{{path}}.html`</li>
+    <li>`{{path}}` — `content/{{path}}.html`</li>
   {{/each}}
 </ul>
 
 **And these {{#with posts}}{{length}}{{/with}} example posts:**
 <ul>
   {{#each posts}}
-    <li>`{{title}}` — `pages/posts/{{slugify title}}.md`</li>
+    <li>`{{title}}` — `content/posts/{{slugify title}}.md`</li>
   {{/each}}
 </ul>

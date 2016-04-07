@@ -1,12 +1,13 @@
+var defaults = require("./defaults");
+
 // https://github.com/superwolff/metalsmith-layouts
 module.exports = {
   // The engine that will render your layouts
-  // https://github.com/tj/consolidate.js#supported-template-engines
-  engine: "handlebars",
+  engine: defaults.templateEngine,
   // Where to look for the layouts
-  directory: "../layouts",
+  directory: "../" + defaults.layoutsDir,
   // Where to look for partials
-  partials: "../layouts/partials",
+  partials: "../" + defaults.partialsDir,
   // The default layout to use
-  default: "page.html"
+  default: defaults.defaultLayout
 };

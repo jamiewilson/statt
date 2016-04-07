@@ -18,14 +18,15 @@ var watch        = require("metalsmith-watch");
 //  Log and config files
 //========================
 
-var log = require("./log");
+var defaults = require("./defaults");
+var step     = require("./build").step;
+var serve    = require("./build").serve;
 
 var config = {
   assets:      require("./assets"),
   collections: require("./collections"),
   copy:        require("./copy"),
   dateFormat:  require("./dateFormat"),
-  defaults:    require("./defaults"),
   helpers:     require("./helpers"),
   layouts:     require("./layouts"),
   markdown:    require("./markdown"),
@@ -41,21 +42,21 @@ var config = {
 
 metalsmith(__dirname)
   .clean(true)
-  .source("../" + config.defaults.src)
-  .destination("../" + config.defaults.dest)
-  .metadata(config.defaults,            log.step("Defaults Defined"))
-  .use(markdown(config.markdown),       log.step("Markdown Files to HTML"))
-  .use(drafts(),                        log.step("Drafts Hidden"))
-  .use(dateFormat(config.dateFormat),   log.step("Dates Formatted"))
-  .use(collections(config.collections), log.step("Collections Defined"))
-  .use(permalinks(config.permalinks),   log.step("Permalinks Created"))
-  .use(layouts(config.layouts),         log.step("Layouts Applied"))
-  .use(inplace(config.layouts),         log.step("Templating Rendered"))
-  .use(datamarkdown(config.markdown),   log.step("Markdown Content to HTML"))
-  .use(assets(config.assets),           log.step("Assets Folder Copied"))
-  .use(copy(config.copy),               log.step("Repo Folder Copied"))
-  .use(prefix(),                        log.step("CSS Prefixed"))
-  .use(sass(config.sass),               log.step("SCSS Processed"))
-  .use(uglify(config.uglify),           log.step("JS Uglified"))
+  .metadata(defaults,                     step("Metadata Defined"))
+  .source("../" + defaults.contentDir,    step("Getting content"))
+  .destination("../" + defaults.buildDir, step("Creating build directory"))
+  .use(markdown(config.markdown),         step("Markdown Files to HTML"))
+  .use(drafts(),                          step("Drafts Hidden"))
+  .use(dateFormat(config.dateFormat),     step("Dates Formatted"))
+  .use(collections(config.collections),   step("Collections Defined"))
+  .use(permalinks(config.permalinks),     step("Permalinks Created"))
+  .use(layouts(config.layouts),           step("Layouts Applied"))
+  .use(inplace(config.layouts),           step("Templating Rendered"))
+  .use(datamarkdown(config.markdown),     step("Markdown Content to HTML"))
+  .use(assets(config.assets),             step("Assets Folder Copied"))
+  .use(copy(config.copy),                 step("Repo Folder Copied"))
+  .use(prefix(),                          step("CSS Prefixed (not working)"))
+  .use(sass(config.sass),                 step("SCSS Processed"))
+  .use(uglify(config.uglify),             step("JS Uglified"))
   .use(watch(config.watch))
-  .build(log.build);
+  .build(serve);

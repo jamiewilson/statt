@@ -1,18 +1,18 @@
-// Pull in defeault values
-var defaults = require('./defaults');
+var defaults = require("./defaults");
+var children = "/**/*";
 
 // http://www.browsersync.io/docs/options/
 module.exports = {
   // the directory of our build
-  server: defaults.dest,
+  server: defaults.buildDir,
   // Use projectName for terminal logs
-  logPrefix: defaults.projectName,
+  logPrefix: defaults.name,
   // Disable the Browsersync UI
   ui: false,
   // use localtunnel.me to serve public link over https
   // tunnel: defaults.projectName.toLowerCase(),
   // open the local url automatically
-  open: 'local',
+  open: "local",
   // don't show Browsersync notifications in-browser
   notify: false,
   // Assume that you're connected to the internet
@@ -22,11 +22,11 @@ module.exports = {
   // Delay reload to ensure enough time for rebuilds
   reloadDelay: 200,
   // Terminal logs: either "info", "debug", "warn", or "silent"
-  logLevel: 'info',
+  logLevel: "info",
   // Watch these files for changes
   files: [
-    'layouts/**/*',
-    'pages/**/*',
-    'assets/**/*'
+    defaults.layoutsDir + children,
+    defaults.contentDir + children,
+    defaults.assetsDir + children
   ]
 };

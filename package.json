@@ -4,6 +4,18 @@
   "description": "A static site workflow that auto-reloads on file changes; synchronizes browsers; compiles, autoprefixes, minifies, and sourcemaps SCSS; concatenates and uglifies JS; provides an external URL for easy cross-device development.",
   "author": "Jamie Wilson",
   "license": "ISC",
+  "site": {
+    "name": "statt",
+    "title": "New Site",
+    "description": "Your new site description.",
+    "contentDir": "content",
+    "buildDir": "build",
+    "assetsDir": "assets",
+    "templateEngine": "handlebars",
+    "layoutsDir": "layouts",
+    "partialsDir": "layouts/partials",
+    "defaultLayout": "page.html"
+  },
   "bin": {
     "statt": "config/statt.js",
     "deploy": "config/deploy.js"
@@ -15,7 +27,7 @@
     "metalsmith": "~2.1.0",
     "metalsmith-assets": "~0.1.0",
     "metalsmith-autoprefixer": "~1.1.0",
-    "metalsmith-collections": "git+https://github.com/deltamualpha/metalsmith-collections.git#idempotent",
+    "metalsmith-collections": "git+https://github.com/spacedawwwg/metalsmith-collections.git",
     "metalsmith-data-markdown": "0.0.3",
     "metalsmith-date-formatter": "~1.0.2",
     "metalsmith-drafts": "~0.0.1",
