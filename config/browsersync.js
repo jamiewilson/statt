@@ -15,12 +15,10 @@ module.exports = {
   open: 'local',
   // don't show Browsersync notifications in-browser
   notify: false,
-  // Assume that you're connected to the internet
-  online: true,
   // Don't mirror scrolling, clicks by defualt
   ghostMode: false,
   // Delay reload to ensure enough time for rebuilds
-  // reloadDelay: 200,
+  reloadDelay: 200,
   // Terminal logs: either "info", "debug", "warn", or "silent"
   logLevel: 'info',
   files: [
