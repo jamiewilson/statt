@@ -1,0 +1,13 @@
+{
+  "siteName": "statt",
+  "siteTitle": "New Site",
+  "siteDescription": "Your new site description.",
+  "assetsDir": "assets",
+  "buildDir": "build",
+  "contentDir": "content",
+  "layoutsDir": "layouts",
+  "partialsDir": "layouts/partials",
+  "defaultLayout": "page.html",
+  "templateEngine": "handlebars",
+  "miscDir": "misc"
+}

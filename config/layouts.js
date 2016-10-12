@@ -1,13 +1,13 @@
-var defaults = require("./defaults");
+const site = require('../site')
 
 // https://github.com/superwolff/metalsmith-layouts
 module.exports = {
-  // The engine that will render your layouts
-  engine: defaults.templateEngine,
+  // The site that will render your layouts
+  engine: site.templateEngine,
   // Where to look for the layouts
-  directory: "../" + defaults.layoutsDir,
+  directory: '../' + site.layoutsDir,
   // Where to look for partials
-  partials: "../" + defaults.partialsDir,
+  partials: '../' + site.partialsDir,
   // The default layout to use
-  default: defaults.defaultLayout
-};
+  default: site.defaultLayout
+}

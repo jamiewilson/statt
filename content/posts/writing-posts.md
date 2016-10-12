@@ -6,7 +6,7 @@ collection: posts
 layout: post.html
 ---
 
-<img src="https://img.shields.io/badge/Github-Flavored-blue.svg?style=flat-square" style="height: 20px; width: auto;"/>
+<small>{{published}}</small>
 
 ## Markdown allows you to write using an easy-to-read, easy-to-write plain text format that converts to HTML.
 
@@ -27,14 +27,14 @@ Wrap word(s) in square brackets and the link in parentheses:
 
     [I am a [link](http://thisismarkdown.com/)
 
-###Images
+### Images
 Like a text link, but with an exclamation point at the beginning:
 
     ![Optional Alt Text](/img/example.gif "Optional title")
 
 _Note: You **must** link directly to an image, i.e. ending in `.gif`, `.jpg`, etc._
 
-![fullwidth](/img/example.gif "An Emedded Image in Markdown")
+![fullwidth](https://farm6.static.flickr.com/5029/5658551241_8852d44b38_o.gif "An Emedded Image in Markdown")
 
 ### New Lines
 To create a new line, you need to end with two empty spaces (shown as black boxes below):

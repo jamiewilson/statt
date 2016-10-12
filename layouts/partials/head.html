@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>{{#if title}}{{title}}{{else}}{{siteTitle}}{{/if}}{{#if siteDescription}} — {{siteDescription}}{{/if}}</title>
   <meta name="description" content="{{siteDescription}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="/css/main.css">
   <link href="/img/favicon.png" rel="shortcut icon">
-</head>
 
+  {{>dependencies}}
+</head>

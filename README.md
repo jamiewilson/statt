@@ -7,38 +7,36 @@ It uses [Browsersync](http://browsersync.io) to autoreload on file changes, sync
 
 **1. Make sure [Node](http://nodejs.org) and [npm](https://docs.npmjs.com/getting-started/installing-node) are installed.**
 
-**2. Clone the Statt repo into a new empty project folder:**
+**2. Clone this repo into a new empty project folder:**
 
 ```
-git clone https://github.com/jamiewilson/statt.git <folder-name>
+git clone https://github.com/jamiewilson/ore.git <folder-name>
 ```
 
-_Or manually install by [downloading the ZIP](https://github.com/jamiewilson/statt/archive/master.zip)._
-
-**3. Install the dependencies and create a global symlink with:**
+**3. Install the dependencies:**
 
 ```
-npm install && npm link
+npm install
 ```
 
 ## Usage
 
-**1. Build your site and launch the dev server with:**
+**Build your site and launch the dev server:**
 
 ```
-statt
+npm start
 ```
 
-**2. To deploy your site with [Surge](https://surge.sh/):**
+**To rebuild a clean site with each file change:**
 
 ```
-deploy
+npm run clean
 ```
 
-**3. When asked by Surge, set your project path to your build folder location. For example:**
+**Build without launching the dev server:**
 
 ```
-project path: ~/projects/mysite/build
+npm run production
 ```
 
 _Et voilà._

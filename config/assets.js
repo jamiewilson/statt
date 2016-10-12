@@ -1,6 +1,6 @@
-var defaults = require("./defaults");
+const site = require('../site')
 
 // https://github.com/treygriffith/metalsmith-assets
 module.exports = {
-  source: "../" + defaults.assetsDir
-};
+  source: '../' + site.assetsDir
+}

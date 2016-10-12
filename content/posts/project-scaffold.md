@@ -4,11 +4,11 @@ published: 2015-10-25
 parentDir: blog
 collection: posts
 layout: post.html
-defaults:
+starter:
   templates:
     - page
     - post
-    - landing
+    - blank
   partials:
     - head
     - nav
@@ -20,17 +20,37 @@ defaults:
 
 ## To get your new site started, there are some basic layouts, partials, pages, and posts already set up for you.
 
-**There are {{#with defaults.templates}}{{length}}{{/with}} templates:**
+Default settings can be edited in `site.json`
+
+```json
+{
+  "siteName":        "{{siteName}}",
+  "siteTitle":       "{{siteTitle}}",
+  "siteDescription": "{{siteDescription}}",
+  "assetsDir":       "{{assetsDir}}",
+  "buildDir":        "{{buildDir}}",
+  "contentDir":      "{{contentDir}}",
+  "layoutsDir":      "{{layoutsDir}}",
+  "partialsDir":     "{{partialsDir}}",
+  "defaultLayout":   "{{defaultLayout}}",
+  "templateEngine":  "{{templateEngine}}"
+}
+```
+
+And referenced in your site or like `\{{siteName}}` or `\{{siteTitle}}`
+
+**There are {{#with starter.templates}}{{length}}{{/with}} templates:**
 <ul>
-  {{#each defaults.templates}}
+  {{#each starter.templates}}
     <li>`{{this}}` — `layouts/{{this}}.html`</li>
   {{/each}}
 </ul>
 
-**And {{#with defaults.partials}}{{length}}{{/with}} partials:**
+
+**And {{#with partials}}{{length}}{{/with}} partials:**
 <ul>
-  {{#each defaults.partials}}
-    <li>`{{this}}` — `layouts/partials/{{this}}.html`</li>
+  {{#each partials}}
+    <li>`{{@key}}` — `layouts/partials/{{@key}}.html`</li>
   {{/each}}
 </ul>
 

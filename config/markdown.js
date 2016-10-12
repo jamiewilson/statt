@@ -12,4 +12,4 @@ module.exports = {
   sanitize: false,
   // removes any markup with the `data-markdown` attribute
   removeAttributeAfterwards: true
-};
+}

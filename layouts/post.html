@@ -3,12 +3,13 @@
   {{>errors}}
   {{>nav}}
   {{>header}}
+
   <article>
     <aside>
-      <span>{{published}}</span>
+      <span>{{contentDir}}/{{path}}.md</span>
       <span>
-        <a href="{{#if previous.path}}/{{previous.path}}{{/if}}">Next</a>
         <a href="{{#if next.path}}/{{next.path}}{{/if}}">Prev</a>
+        <a href="{{#if previous.path}}/{{previous.path}}{{/if}}">Next</a>
       </span>
     </aside>
     <section>
@@ -18,3 +19,4 @@
   {{>footer}}
   {{>scripts}}
 </body>
+</html>

@@ -1,26 +1,31 @@
 //  Start, Steps, and Build Error Messages
-var chalk = require("chalk");
-var browsersync = require("browser-sync").create();
-var config = { browsersync: require("./browsersync") };
+const chalk = require('chalk')
+const browsersync = require('browser-sync').create()
+const bsConfig = require('./browsersync')
+const buildType = (process.env.NODE_ENV || '');
 
-// Inform that the site build has started
-(function(){
-  console.log("\n" + chalk.underline("Building your site\n"));
-})();
+// Inform what type of build has started
+console.log(chalk.blue(`Building: ${buildType.toUpperCase()}\n`))
 
 module.exports = {
   // Log each step as it finishes
-  step: function(message) {
-    console.log(chalk.green(">> ") + message);
-  },
+  step: message => { console.log(chalk.green('>> ') + message) },
+
+  // if NODE_ENV=clean this returns true
+  clean: (buildType === 'clean'),
+
+  // if NODE_ENV=production then return true
+  production: (buildType === 'production'),
+  errors: err => { if (err) throw err },
+
   // Launch Browsersync server after build is done
-  serve: function(error) {
-    browsersync.init(config.browsersync);
-    if (error) {
+  serve: function (err) {
+    console.log();
+    browsersync.init(bsConfig)
+    if (err) {
       // Reports any build errors on initial build
-      // TODO: throw after a rebuild as well
-      console.log(chalk.magenta.underline("\nOops, there was a problem!"));
-      console.log(error.message + "\n");
+      console.log(chalk.magenta('\n' + 'Oops, there was a problem!'))
+      console.log(err.message + '\n')
     }
   }
 }

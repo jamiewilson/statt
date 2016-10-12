@@ -2,8 +2,8 @@
 module.exports = {
   dates: [{
     // the front-matter property name
-    key: "published",
+    key: 'published',
     // any momentjs format value
-    format: "MMMM DD, YYYY"
+    format: 'MMMM DD, YYYY'
   }]
-};
+}
