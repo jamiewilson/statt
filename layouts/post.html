@@ -1,22 +1,23 @@
-{{>head}}
-<body class="container">
-  {{>errors}}
-  {{>nav}}
-  {{>header}}
-
-  <article>
-    <aside>
-      <span>{{contentDir}}/{{path}}.md</span>
-      <span>
-        <a href="{{#if next.path}}/{{next.path}}{{/if}}">Prev</a>
-        <a href="{{#if previous.path}}/{{previous.path}}{{/if}}">Next</a>
-      </span>
-    </aside>
-    <section>
-      {{{contents}}}
-    </section>
-  </article>
-  {{>footer}}
-  {{>scripts}}
-</body>
+<!DOCTYPE html>
+  {{>head}}
+  <body class="container">
+    {{>errors}}
+    {{>nav}}
+    {{>header}}
+    <article>
+      <aside>
+        <span>{{contentDir}}/{{path}}.md</span>
+        <span>
+          <a href="{{#if previous.path}}/{{previous.path}}{{/if}}">Newer</a>
+          <a href="{{#if next.path}}/{{next.path}}{{/if}}">Older</a>
+        </span>
+      </aside>
+      <section>
+        <small>{{published}}</small>
+        {{{contents}}}
+      </section>
+    </article>
+    {{>footer}}
+  </body>
 </html>
+

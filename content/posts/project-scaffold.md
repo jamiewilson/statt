@@ -1,6 +1,6 @@
 ---
 title: Project Scaffold
-published: 2015-10-25
+published: 2016-10-25
 parentDir: blog
 collection: posts
 layout: post.html
@@ -39,30 +39,29 @@ Default settings can be edited in `site.json`
 
 And referenced in your site or like `\{{siteName}}` or `\{{siteTitle}}`
 
-**There are {{#with starter.templates}}{{length}}{{/with}} templates:**
+**There are {{starter.templates.length}} templates:**
 <ul>
   {{#each starter.templates}}
     <li>`{{this}}` — `layouts/{{this}}.html`</li>
   {{/each}}
 </ul>
 
-
-**And {{#with partials}}{{length}}{{/with}} partials:**
+**And {{starter.partials.length}} partials:**
 <ul>
   {{#each partials}}
     <li>`{{@key}}` — `layouts/partials/{{@key}}.html`</li>
   {{/each}}
 </ul>
 
-**Which are used to make these {{#with pages}}{{add length 1}}{{/with}} pages:**
+**Which are used to make these {{add pages.length 1}} pages:**
 <ul>
-  <li>`overview` — `content/index.html`</li>
+  <li>`index` — `content/index.html`</li>
   {{#each pages}}
     <li>`{{path}}` — `content/{{path}}.html`</li>
   {{/each}}
 </ul>
 
-**And these {{#with posts}}{{length}}{{/with}} example posts:**
+**And these {{posts.length}} example posts:**
 <ul>
   {{#each posts}}
     <li>`{{title}}` — `content/posts/{{slugify title}}.md`</li>

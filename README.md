@@ -105,9 +105,10 @@ Watches for a changes and triggers rebuilds.
 Terminal string styling done right.
 
 ## Updating
-To fetch and merge the latest version of Statt without losing any customizations you've made, and to also avoid having to deal with any potential merge conflicts, stash your changes, pull, rebase, and pop your changes back on top:
+To fetch and merge the latest version of Statt without losing any customizations you've made, and to also avoid having to deal with any potential merge conflicts, add and then stash your changes, pull the latest code and rebase, then pop your changes back on top:
 
 ```
+git add .
 git stash
 git pull --rebase
 git stash pop

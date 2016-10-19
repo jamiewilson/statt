@@ -1,12 +1,10 @@
 ---
 title: Writing Posts
-published: 2015-12-05
+published: 2016-12-05
 parentDir: blog
 collection: posts
 layout: post.html
 ---
-
-<small>{{published}}</small>
 
 ## Markdown allows you to write using an easy-to-read, easy-to-write plain text format that converts to HTML.
 

@@ -1,6 +1,6 @@
 ---
 title: Installing Statt
-published: 2015-09-18
+published: 2016-09-18
 parentDir: blog
 collection: posts
 layout: post.html

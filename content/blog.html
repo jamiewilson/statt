@@ -1,6 +1,6 @@
 ---
 title: Blog
-subtitle: Example Posts
+subtitle: example posts
 collection: pages
 order: 2
 ---
@@ -8,11 +8,11 @@ order: 2
 <main>
   <aside>{{contentDir}}/blog.html</aside>
   <section>
-    <h1>{{subtitle}}:</h1>
+    <h1>{{titleCase subtitle}}:</h1>
     <ul>
-     {{#each collections.posts}}
+     {{#each-reverse collections.posts}}
        <li><a href="/{{path}}">{{title}}</a></li>
-     {{/each}}
+     {{/each-reverse}}
     </ul>
   </section>
 </main>

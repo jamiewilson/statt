@@ -4,6 +4,7 @@ module.exports = {
     // the front-matter property name
     key: 'published',
     // any momentjs format value
+    // http://momentjs.com/docs/#/parsing/string-format/
     format: 'MMMM DD, YYYY'
   }]
 }

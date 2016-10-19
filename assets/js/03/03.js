@@ -1,1 +1,1 @@
-console.log('Path: ./assets/js/03/')
+console.log('Path: /assets/js/03/')
