@@ -13,10 +13,10 @@ It uses [Browsersync](http://browsersync.io) to autoreload on file changes, sync
 git clone https://github.com/jamiewilson/ore.git <folder-name>
 ```
 
-**3. Install the dependencies:** _If you prefer, you can use `npm install` instead_
+**3. Install the dependencies:**
 
 ```bash
-yarn
+npm install
 ```
 
 ## Usage
@@ -24,19 +24,19 @@ yarn
 **Build your site and launch the dev server:**
 
 ```bash
-yarn start
+npm start
 ```
 
 **To rebuild a clean site with each file change:**
 
 ```bash
-yarn run clean
+npm run clean
 ```
 
 **Build without launching the dev server:**
 
 ```bash
-yarn run production
+npm run production
 ```
 
 _Et voilà._

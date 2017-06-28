@@ -1,8 +1,8 @@
 //  Start, Steps, and Build Error Messages
-const chalk = require('chalk')
-const browsersync = require('browser-sync').create()
-const bsConfig = require('./browsersync')
-const buildType = (process.env.NODE_ENV || '');
+var chalk = require('chalk')
+var browsersync = require('browser-sync').create()
+var bsConfig = require('./browsersync')
+var buildType = (process.env.NODE_ENV || '');
 
 // Inform what type of build has started
 console.log(chalk.blue(`Building: ${buildType.toUpperCase()}\n`))

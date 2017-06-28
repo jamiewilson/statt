@@ -1,27 +1,27 @@
-const metalsmith   = require('metalsmith')
-const assets       = require('metalsmith-assets')
-const collections  = require('metalsmith-collections')
-const misc         = require('metalsmith-static')
-const datamarkdown = require('metalsmith-data-markdown')
-const dateFormat   = require('metalsmith-date-formatter')
-const drafts       = require('metalsmith-drafts')
-const inplace      = require('metalsmith-in-place')
-const layouts      = require('metalsmith-layouts')
-const markdown     = require('metalsmith-markdown')
-const permalinks   = require('metalsmith-permalinks')
-const scss         = require('metalsmith-sense-sass')
-const uglify       = require('metalsmith-uglify')
-const watch        = require('metalsmith-watch')
+var metalsmith   = require('metalsmith')
+var assets       = require('metalsmith-assets')
+var collections  = require('metalsmith-collections')
+var misc         = require('metalsmith-static')
+var datamarkdown = require('metalsmith-data-markdown')
+var dateFormat   = require('metalsmith-date-formatter')
+var drafts       = require('metalsmith-drafts')
+var inplace      = require('metalsmith-in-place')
+var layouts      = require('metalsmith-layouts')
+var markdown     = require('metalsmith-markdown')
+var permalinks   = require('metalsmith-permalinks')
+var scss         = require('metalsmith-sense-sass')
+var uglify       = require('metalsmith-uglify')
+var watch        = require('metalsmith-watch')
 
 // Data, log, and config
-const site       = require('../site')
-const step       = require('./build').step
-const serve      = require('./build').serve
-const clean      = require('./build').clean
-const production = require('./build').production
-const errors     = require('./build').errors
+var site       = require('../site')
+var step       = require('./build').step
+var serve      = require('./build').serve
+var clean      = require('./build').clean
+var production = require('./build').production
+var errors     = require('./build').errors
 
-const config = {
+var config = {
   assets:      require('./assets'),
   collections: require('./collections'),
   misc:        require('./misc'),
@@ -36,7 +36,7 @@ const config = {
 }
 
 // Base build pipeline - order matters!
-const statt = metalsmith(__dirname)
+var statt = metalsmith(__dirname)
   .clean(clean || production)
   .metadata(site,                       step('Metadata defined'))
   .source('../' + site.contentDir,      step('Content sourced'))

@@ -1,7 +1,7 @@
-const site = require('../site')
-const layouts = '../' + site.layoutsDir + '/**/*'
-const content = '../' + site.contentDir + '/**/*'
-const assets = '../' + site.assetsDir + '/**/*'
+var site = require('../site')
+var layouts = '../' + site.layoutsDir + '/**/*'
+var content = '../' + site.contentDir + '/**/*'
+var assets = '../' + site.assetsDir + '/**/*'
 
 // https://github.com/FWeinb/metalsmith-watch
 module.exports = {

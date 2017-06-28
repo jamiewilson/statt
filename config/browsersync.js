@@ -1,5 +1,5 @@
-const site = require('../site')
-const children = '/**/*'
+var site = require('../site')
+var children = '/**/*'
 
 // http://www.browsersync.io/docs/options/
 module.exports = {

@@ -1,4 +1,4 @@
-const site = require('../site')
+var site = require('../site')
 
 // https://github.com/TheHydroImpulse/metalsmith-static
 module.exports = {
